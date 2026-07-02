@@ -1,0 +1,35 @@
+{
+  "title": "Vyapaar Mitra Observability",
+  "panels": [
+    {
+      "title": "Circuit Breaker Trips Total",
+      "type": "stat",
+      "targets": [
+        {
+          "expr": "sum(increase(circuit_breaker_trips_total[5m]))",
+          "legendFormat": "Trips"
+        }
+      ]
+    },
+    {
+      "title": "Retry Attempts",
+      "type": "timeseries",
+      "targets": [
+        {
+          "expr": "rate(retry_attempts_total[1m])",
+          "legendFormat": "Retries per min"
+        }
+      ]
+    },
+    {
+      "title": "Onboarding Duration",
+      "type": "heatmap",
+      "targets": [
+        {
+          "expr": "sum(rate(onboarding_duration_seconds_bucket[5m])) by (le)",
+          "format": "heatmap"
+        }
+      ]
+    }
+  ]
+}

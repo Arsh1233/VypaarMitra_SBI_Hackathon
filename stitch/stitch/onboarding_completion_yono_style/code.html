@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vyapaar Mitra | Account Active</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mono-font { font-family: 'Courier New', Courier, monospace; letter-spacing: 0.1em; }
+        
+        /* Pulse Animation for the Checkmark */
+        @keyframes pulse-success {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(83, 187, 123, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 20px rgba(83, 187, 123, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(83, 187, 123, 0); }
+        }
+        .animate-pulse-success {
+            animation: pulse-success 2s infinite;
+        }
+
+        /* Subtle background pattern */
+        .bg-pattern {
+            background-color: #f9f9ff;
+            background-image: radial-gradient(#dce2f3 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(229, 231, 235, 1);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#d7e3ff",
+                      "surface-container-low": "#f0f3ff",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#405e92",
+                      "on-surface-variant": "#43474f",
+                      "secondary-fixed": "#ffdad6",
+                      "on-background": "#151c27",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#264679",
+                      "secondary-fixed-dim": "#ffb4ac",
+                      "error": "#ba1a1a",
+                      "tertiary": "#002e16",
+                      "tertiary-container": "#004725",
+                      "surface-bright": "#f9f9ff",
+                      "tertiary-fixed-dim": "#73db97",
+                      "surface-variant": "#dce2f3",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#abc7ff",
+                      "on-error": "#ffffff",
+                      "surface-container": "#e7eefe",
+                      "primary": "#002653",
+                      "tertiary-fixed": "#8ff8b2",
+                      "on-tertiary-fixed-variant": "#00522b",
+                      "surface-container-high": "#e2e8f8",
+                      "outline-variant": "#c4c6d0",
+                      "on-secondary-container": "#fffbff",
+                      "background": "#f9f9ff",
+                      "on-surface": "#151c27",
+                      "inverse-primary": "#abc7ff",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#ebf1ff",
+                      "surface-dim": "#d3daea",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#53bb7b",
+                      "on-primary-container": "#8aa8e0",
+                      "outline": "#747780",
+                      "surface": "#f9f9ff",
+                      "primary-container": "#1a3c6e",
+                      "secondary-container": "#e51d24",
+                      "surface-container-highest": "#dce2f3",
+                      "on-tertiary-fixed": "#00210e",
+                      "secondary": "#bb0014",
+                      "on-primary-fixed": "#001b3f",
+                      "on-secondary-fixed": "#410002",
+                      "on-secondary-fixed-variant": "#93000d",
+                      "inverse-surface": "#2a313d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "32px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "gutter": "12px",
+                      "stack-lg": "24px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col bg-pattern">
+<!-- Top AppBar (JSON Content Hierarchy) -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary cursor-pointer active:opacity-80 transition-opacity">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Vyapaar Mitra</h1>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-inverse-primary cursor-pointer active:opacity-80 transition-opacity">translate</span>
+</div>
+</header>
+<main class="flex-grow pt-24 pb-32 px-margin-mobile max-w-2xl mx-auto w-full">
+<!-- Celebratory Success Header -->
+<section class="flex flex-col items-center text-center mb-stack-lg">
+<div class="w-24 h-24 bg-on-tertiary-container text-white rounded-full flex items-center justify-center animate-pulse-success mb-stack-md">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1, 'wght' 700;">check_circle</span>
+</div>
+<h2 class="font-display-lg text-display-lg text-primary mb-stack-sm">Congratulations, Ramesh!</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Your business account is now fully active and ready for transactions.</p>
+</section>
+<!-- Account Tier Badge -->
+<div class="flex justify-center mb-stack-lg">
+<div class="bg-primary-fixed text-on-primary-fixed px-4 py-1.5 rounded-full flex items-center gap-2 border border-primary-container">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md tracking-wider">FULL ACCOUNT TIER</span>
+</div>
+</div>
+<!-- Structured Account Card (Institutional YONO Style) -->
+<div class="glass-card rounded-xl p-stack-lg shadow-sm border border-outline-variant relative overflow-hidden mb-stack-lg">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-8xl">account_balance</span>
+</div>
+<div class="space-y-stack-md relative z-10">
+<div>
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1">ACCOUNT HOLDER</label>
+<p class="font-headline-sm text-headline-sm text-primary uppercase">Ramesh Kumar</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="p-stack-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1">ACCOUNT NUMBER</label>
+<p class="font-body-md text-body-md font-bold text-on-surface mono-font">3829 4402 9912 00</p>
+</div>
+<div class="p-stack-md bg-surface-container-low rounded-lg border border-outline-variant/30">
+<label class="font-label-md text-label-md text-on-surface-variant block mb-1">IFSC CODE</label>
+<p class="font-body-md text-body-md font-bold text-on-surface mono-font">VPMT0004921</p>
+</div>
+</div>
+<div class="pt-stack-sm border-t border-outline-variant flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">location_on</span>
+<span class="font-body-sm text-body-sm">Main Branch, Industrial Hub</span>
+</div>
+<span class="font-label-md text-label-md text-primary font-bold">SAVINGS ACCOUNT</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-stack-md">
+<button class="w-full h-14 bg-primary text-on-primary font-bold rounded-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">download</span>
+                Download Welcome Kit
+            </button>
+<button class="w-full h-14 bg-secondary text-on-secondary font-bold rounded-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform">
+<span class="material-symbols-outlined">rocket_launch</span>
+                Explore YONO Business
+            </button>
+<button class="w-full h-14 bg-white border-2 border-primary text-primary font-bold rounded-lg flex items-center justify-center gap-2 active:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">share</span>
+                Share Account Details
+            </button>
+</div>
+<!-- Verification/Trust Section -->
+<div class="mt-stack-lg p-stack-md rounded-xl bg-tertiary-fixed/20 border border-tertiary-fixed flex gap-4">
+<span class="material-symbols-outlined text-on-tertiary-fixed-variant">security</span>
+<div>
+<h4 class="font-label-md text-label-md text-on-tertiary-fixed-variant">SECURELY ACTIVATED</h4>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant/80">Your account is secured with multi-factor authentication and bank-grade encryption.</p>
+</div>
+</div>
+</main>
+<!-- Bottom NavBar (JSON Content Hierarchy) -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant dark:border-outline shadow-lg flex justify-around items-center h-20 w-full pb-safe">
+<div class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold active:scale-95 transition-transform duration-100 cursor-pointer">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high active:scale-95 transition-transform duration-100 cursor-pointer">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-label-md text-label-md">Accounts</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high active:scale-95 transition-transform duration-100 cursor-pointer">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md">Products</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high active:scale-95 transition-transform duration-100 cursor-pointer">
+<span class="material-symbols-outlined">handshake</span>
+<span class="font-label-md text-label-md">Services</span>
+</div>
+</nav>
+<script>
+        // Simple ripple/interaction effect for buttons
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const ripple = document.createElement('span');
+                ripple.style.position = 'absolute';
+                ripple.style.width = '20px';
+                ripple.style.height = '20px';
+                ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                ripple.style.borderRadius = '50%';
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                ripple.style.transform = 'translate(-50%, -50%) scale(0)';
+                ripple.style.transition = 'transform 0.5s ease-out, opacity 0.5s';
+                ripple.style.pointerEvents = 'none';
+                
+                this.style.position = 'relative';
+                this.style.overflow = 'hidden';
+                this.appendChild(ripple);
+                
+                requestAnimationFrame(() => {
+                    ripple.style.transform = 'translate(-50%, -50%) scale(20)';
+                    ripple.style.opacity = '0';
+                });
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+    </script>
+</body></html>

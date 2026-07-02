@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vyapaar Mitra - Document Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9f9ff;
+        }
+        .verification-shimmer {
+            background: linear-gradient(90deg, #1a3c6e 0%, #405e92 50%, #1a3c6e 100%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#d7e3ff",
+                      "surface-container-low": "#f0f3ff",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#405e92",
+                      "on-surface-variant": "#43474f",
+                      "secondary-fixed": "#ffdad6",
+                      "on-background": "#151c27",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#264679",
+                      "secondary-fixed-dim": "#ffb4ac",
+                      "error": "#ba1a1a",
+                      "tertiary": "#002e16",
+                      "tertiary-container": "#004725",
+                      "surface-bright": "#f9f9ff",
+                      "tertiary-fixed-dim": "#73db97",
+                      "surface-variant": "#dce2f3",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#abc7ff",
+                      "on-error": "#ffffff",
+                      "surface-container": "#e7eefe",
+                      "primary": "#002653",
+                      "tertiary-fixed": "#8ff8b2",
+                      "on-tertiary-fixed-variant": "#00522b",
+                      "surface-container-high": "#e2e8f8",
+                      "outline-variant": "#c4c6d0",
+                      "on-secondary-container": "#fffbff",
+                      "background": "#f9f9ff",
+                      "on-surface": "#151c27",
+                      "inverse-primary": "#abc7ff",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#ebf1ff",
+                      "surface-dim": "#d3daea",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#53bb7b",
+                      "on-primary-container": "#8aa8e0",
+                      "outline": "#747780",
+                      "surface": "#f9f9ff",
+                      "primary-container": "#1a3c6e",
+                      "secondary-container": "#e51d24",
+                      "surface-container-highest": "#dce2f3",
+                      "on-tertiary-fixed": "#00210e",
+                      "secondary": "#bb0014",
+                      "on-primary-fixed": "#001b3f",
+                      "on-secondary-fixed": "#410002",
+                      "on-secondary-fixed-variant": "#93000d",
+                      "inverse-surface": "#2a313d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "32px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "gutter": "12px",
+                      "stack-lg": "24px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "headline-sm": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "headline-lg-mobile": ["Inter"],
+                      "label-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "display-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant shadow-sm flex justify-between items-center px-margin-mobile h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="active:opacity-80 transition-opacity p-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Vyapaar Mitra</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="active:opacity-80 transition-opacity p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined">translate</span>
+</button>
+<button class="active:opacity-80 transition-opacity p-2 rounded-full hover:bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-24 px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto min-h-screen">
+<!-- Verification Stepper/Context -->
+<div class="mb-stack-lg">
+<div class="flex justify-between items-end mb-stack-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-primary">Document Verification</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Step 2 of 4: Business Identity</p>
+</div>
+<span class="font-label-md text-label-md bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full">KYC LEVEL 1</span>
+</div>
+<div class="w-full bg-surface-variant h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/2 rounded-full"></div>
+</div>
+</div>
+<!-- Tabbed Navigation -->
+<div class="flex gap-2 overflow-x-auto pb-stack-sm mb-stack-lg no-scrollbar">
+<button class="tab-btn flex-shrink-0 flex items-center gap-2 px-6 py-2.5 rounded-full font-label-md text-label-md transition-all bg-primary-container text-on-primary-container font-bold" id="tab-pan" onclick="switchTab('pan')">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+                PAN Card
+            </button>
+<button class="tab-btn flex-shrink-0 flex items-center gap-2 px-6 py-2.5 rounded-full font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high" id="tab-gst" onclick="switchTab('gst')">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+                GST Details
+            </button>
+<button class="tab-btn flex-shrink-0 flex items-center gap-2 px-6 py-2.5 rounded-full font-label-md text-label-md transition-all text-on-surface-variant hover:bg-surface-container-high" id="tab-aadhar" onclick="switchTab('aadhar')">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+                Aadhar Card
+            </button>
+</div>
+<!-- Document Upload Content -->
+<div class="space-y-stack-lg" id="content-container">
+<!-- Upload Card -->
+<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden shadow-sm transition-all duration-500" id="upload-card">
+<div class="p-stack-lg flex flex-col md:flex-row gap-stack-lg">
+<!-- Preview/Capture Area -->
+<div class="flex-1">
+<div class="relative aspect-[3/2] w-full rounded-lg border-2 border-dashed border-outline-variant bg-surface-container-low flex flex-items-center justify-center overflow-hidden group cursor-pointer active:scale-[0.98] transition-transform" id="preview-box">
+<div class="flex flex-col items-center gap-stack-sm" id="empty-state">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">add_a_photo</span>
+</div>
+<p class="font-body-md text-body-md font-semibold text-primary">Capture PAN Front</p>
+<p class="font-label-md text-label-md text-on-surface-variant px-stack-lg text-center">Place card within the frame. Ensure no glare.</p>
+</div>
+<!-- Captured Image Preview (Hidden initially) -->
+<div class="hidden absolute inset-0 w-full h-full" id="captured-image">
+<div class="w-full h-full bg-cover bg-center" data-alt="A professional close-up of a standard Indian PAN card placed on a neutral gray office desk. The lighting is diffused and professional to minimize glare, highlighting the text and portrait. The overall aesthetic is clean and institutional, consistent with a banking application's document verification flow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdll4t9fz18ld2Hj3Wtzo2ZrKXi5ysII_Qz-DX9M5zjtcj-2jfbkWG1qS7YJk_okBiyN6ghf4NT0_g33lLEUtlHSGO38ovFFGqrPFQ061n4xeDXTEi6TBXvn0hR5rYnoYdcwJrnj2X4sD2bXZsGafkXrFjY0xFqxpl-OGIeAtKI4G5tkB8CnCCWJWkrGjvp_LLPi7y8EJPKS1d2e45LwN30kZJGEzlqx5SeQHXRLy9LWjpGwI-mR94')"></div>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<button class="bg-surface/90 text-primary px-4 py-2 rounded-full font-label-md shadow-lg flex items-center gap-2" onclick="resetUpload()">
+<span class="material-symbols-outlined text-sm">refresh</span> Retake
+                                    </button>
+</div>
+</div>
+<!-- Scanning Overlay (Hidden) -->
+<div class="hidden absolute inset-0 z-10 pointer-events-none" id="scan-overlay">
+<div class="w-full h-1 bg-primary verification-shimmer absolute shadow-[0_0_15px_rgba(26,60,110,0.8)]"></div>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+</div>
+</div>
+<!-- Upload Controls & Status -->
+<div class="md:w-72 flex flex-col justify-between py-2">
+<div class="space-y-stack-md">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Upload Options</h3>
+<div class="space-y-stack-sm">
+<button class="w-full flex items-center justify-between p-stack-md rounded-lg border border-outline-variant hover:bg-surface-container-low transition-colors text-left group" onclick="startVerification()">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">camera</span>
+<span class="font-body-md text-body-md font-medium">Use Camera</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-stack-md rounded-lg border border-outline-variant hover:bg-surface-container-low transition-colors text-left group" onclick="startVerification()">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">photo_library</span>
+<span class="font-body-md text-body-md font-medium">From Gallery</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:translate-x-1 transition-transform">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- 3-Strikes Counter -->
+<div class="mt-stack-lg p-stack-md bg-surface-container rounded-lg border border-outline-variant/30">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">RETRY CHANCES</span>
+<span class="font-label-md text-label-md font-bold text-primary" id="retry-count">3 / 3 Left</span>
+</div>
+<div class="flex gap-1">
+<div class="h-1 flex-1 bg-primary rounded-full transition-colors" id="strike-1"></div>
+<div class="h-1 flex-1 bg-primary rounded-full transition-colors" id="strike-2"></div>
+<div class="h-1 flex-1 bg-primary rounded-full transition-colors" id="strike-3"></div>
+</div>
+<p class="mt-2 text-[10px] uppercase tracking-wider font-bold text-on-surface-variant">Blurry photos will lead to rejection</p>
+</div>
+</div>
+</div>
+<!-- Verification Status Drawer (Dynamic) -->
+<div class="hidden border-t border-outline-variant bg-surface-container-low p-stack-md animate-in slide-in-from-bottom duration-300" id="status-drawer">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center" id="status-icon-container">
+<span class="material-symbols-outlined text-primary animate-spin" id="status-icon">refresh</span>
+</div>
+<div class="flex-1">
+<h4 class="font-body-md text-body-md font-bold text-primary" id="status-title">Verifying...</h4>
+<p class="font-label-md text-label-md text-on-surface-variant" id="status-desc">Extracting data from document</p>
+</div>
+<div class="relative w-8 h-8" id="status-progress-circle">
+<svg class="w-full h-full -rotate-90">
+<circle class="text-surface-variant" cx="16" cy="16" fill="transparent" r="14" stroke="currentColor" stroke-width="3"></circle>
+<circle class="text-primary" cx="16" cy="16" fill="transparent" id="progress-ring" r="14" stroke="currentColor" stroke-dasharray="88" stroke-dashoffset="88" stroke-width="3"></circle>
+</svg>
+</div>
+</div>
+</div>
+</div>
+<!-- Guidelines Card -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-lg shadow-sm">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined">info</span>
+                    Verification Tips
+                </h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-container">light_mode</span>
+<div>
+<p class="font-body-md text-body-md font-bold">Good Lighting</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Avoid shadows and direct flash glare on the card.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-container">center_focus_strong</span>
+<div>
+<p class="font-body-md text-body-md font-bold">Sharp Focus</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ensure all text and your photo are clearly visible.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-container">crop_free</span>
+<div>
+<p class="font-body-md text-body-md font-bold">Within Frame</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">All four corners of the card must be within the photo.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex flex-col gap-stack-md pt-4">
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-body-md font-bold opacity-50 cursor-not-allowed shadow-md active:scale-[0.99] transition-all" disabled="" id="final-submit">
+                    PROCEED TO NEXT STEP
+                </button>
+<p class="text-center font-label-md text-label-md text-on-surface-variant">
+                    By proceeding, you agree to our <a class="text-primary underline" href="#">Document Handling Policy</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Hidden on Desktop via Responsive Pivot Rule) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface-container-lowest border-t border-outline-variant shadow-lg flex justify-around items-center h-20 w-full pb-safe">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-md text-label-md">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary font-bold hover:bg-surface-container-high transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined fill-icon">account_balance_wallet</span>
+<span class="font-label-md text-label-md">Accounts</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md">Products</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-transform duration-100 active:scale-95">
+<span class="material-symbols-outlined">handshake</span>
+<span class="font-label-md text-label-md">Services</span>
+</button>
+</nav>
+<script>
+        let retries = 3;
+        let isVerifying = false;
+
+        function switchTab(tab) {
+            const tabs = ['pan', 'gst', 'aadhar'];
+            tabs.forEach(t => {
+                const el = document.getElementById(`tab-${t}`);
+                if (t === tab) {
+                    el.classList.add('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                    el.classList.remove('text-on-surface-variant', 'hover:bg-surface-container-high');
+                } else {
+                    el.classList.remove('bg-primary-container', 'text-on-primary-container', 'font-bold');
+                    el.classList.add('text-on-surface-variant', 'hover:bg-surface-container-high');
+                }
+            });
+            // Reset state when switching tabs
+            resetUpload();
+        }
+
+        function startVerification() {
+            if (isVerifying || retries <= 0) return;
+            isVerifying = true;
+
+            const emptyState = document.getElementById('empty-state');
+            const capturedImage = document.getElementById('captured-image');
+            const scanOverlay = document.getElementById('scan-overlay');
+            const statusDrawer = document.getElementById('status-drawer');
+            const ring = document.getElementById('progress-ring');
+            
+            emptyState.classList.add('hidden');
+            capturedImage.classList.remove('hidden');
+            scanOverlay.classList.remove('hidden');
+            statusDrawer.classList.remove('hidden');
+
+            // Animation for scanning line
+            let pos = 0;
+            const scanLine = scanOverlay.querySelector('div');
+            const scanInterval = setInterval(() => {
+                pos += 1;
+                scanLine.style.top = `${pos % 100}%`;
+            }, 30);
+
+            // Progress Ring logic
+            let progress = 0;
+            const progressInterval = setInterval(() => {
+                progress += 2;
+                const offset = 88 - (progress / 100) * 88;
+                ring.style.strokeDashoffset = offset;
+
+                if (progress >= 100) {
+                    clearInterval(progressInterval);
+                    clearInterval(scanInterval);
+                    completeVerification();
+                }
+            }, 60);
+        }
+
+        function completeVerification() {
+            const isSuccess = Math.random() > 0.3; // Simulating a success rate
+            const statusTitle = document.getElementById('status-title');
+            const statusDesc = document.getElementById('status-desc');
+            const statusIcon = document.getElementById('status-icon');
+            const statusIconContainer = document.getElementById('status-icon-container');
+            const scanOverlay = document.getElementById('scan-overlay');
+            const progressCircle = document.getElementById('status-progress-circle');
+
+            scanOverlay.classList.add('hidden');
+            progressCircle.classList.add('hidden');
+
+            if (isSuccess) {
+                statusTitle.innerText = "Verified Successfully";
+                statusTitle.classList.replace('text-primary', 'text-tertiary-container');
+                statusDesc.innerText = "PAN: ABCDE1234F • RAMESH KUMAR";
+                statusIcon.innerText = "check_circle";
+                statusIcon.classList.remove('animate-spin');
+                statusIcon.classList.add('text-tertiary-container');
+                statusIconContainer.classList.replace('bg-primary/10', 'bg-tertiary-fixed');
+                
+                const submitBtn = document.getElementById('final-submit');
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            } else {
+                failVerification();
+            }
+        }
+
+        function failVerification() {
+            retries--;
+            const statusTitle = document.getElementById('status-title');
+            const statusDesc = document.getElementById('status-desc');
+            const statusIcon = document.getElementById('status-icon');
+            const statusIconContainer = document.getElementById('status-icon-container');
+            const retryText = document.getElementById('retry-count');
+
+            statusTitle.innerText = "Verification Failed";
+            statusTitle.classList.replace('text-primary', 'text-secondary');
+            statusDesc.innerText = "Image too blurry. Please retake photo.";
+            statusIcon.innerText = "error";
+            statusIcon.classList.remove('animate-spin');
+            statusIcon.classList.add('text-secondary');
+            statusIconContainer.classList.replace('bg-primary/10', 'bg-secondary-fixed');
+
+            retryText.innerText = `${retries} / 3 Left`;
+            
+            // Update visual strikes
+            const strike = document.getElementById(`strike-${3 - retries}`);
+            if (strike) {
+                strike.classList.replace('bg-primary', 'bg-outline-variant');
+            }
+
+            if (retries === 0) {
+                statusDesc.innerText = "Retry limit reached. Contact support.";
+                document.getElementById('upload-card').classList.add('opacity-70', 'pointer-events-none');
+            }
+            
+            isVerifying = false;
+        }
+
+        function resetUpload() {
+            isVerifying = false;
+            document.getElementById('empty-state').classList.remove('hidden');
+            document.getElementById('captured-image').classList.add('hidden');
+            document.getElementById('scan-overlay').classList.add('hidden');
+            document.getElementById('status-drawer').classList.add('hidden');
+            document.getElementById('status-progress-circle').classList.remove('hidden');
+            
+            const statusTitle = document.getElementById('status-title');
+            statusTitle.innerText = "Verifying...";
+            statusTitle.className = "font-body-md text-body-md font-bold text-primary";
+            
+            const statusIcon = document.getElementById('status-icon');
+            statusIcon.innerText = "refresh";
+            statusIcon.className = "material-symbols-outlined text-primary animate-spin";
+            
+            const statusIconContainer = document.getElementById('status-icon-container');
+            statusIconContainer.className = "w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center";
+
+            const submitBtn = document.getElementById('final-submit');
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        }
+    </script>
+</body></html>

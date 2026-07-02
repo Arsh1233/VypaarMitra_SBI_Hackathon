@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>Vyapaar Mitra - Business Banking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#d7e3ff",
+                    "surface-container-low": "#f0f3ff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#405e92",
+                    "on-surface-variant": "#43474f",
+                    "secondary-fixed": "#ffdad6",
+                    "on-background": "#151c27",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#264679",
+                    "secondary-fixed-dim": "#ffb4ac",
+                    "error": "#ba1a1a",
+                    "tertiary": "#002e16",
+                    "tertiary-container": "#004725",
+                    "surface-bright": "#f9f9ff",
+                    "tertiary-fixed-dim": "#73db97",
+                    "surface-variant": "#dce2f3",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#abc7ff",
+                    "on-error": "#ffffff",
+                    "surface-container": "#e7eefe",
+                    "primary": "#002653",
+                    "tertiary-fixed": "#8ff8b2",
+                    "on-tertiary-fixed-variant": "#00522b",
+                    "surface-container-high": "#e2e8f8",
+                    "outline-variant": "#c4c6d0",
+                    "on-secondary-container": "#fffbff",
+                    "background": "#f9f9ff",
+                    "on-surface": "#151c27",
+                    "inverse-primary": "#abc7ff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#ebf1ff",
+                    "surface-dim": "#d3daea",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#53bb7b",
+                    "on-primary-container": "#8aa8e0",
+                    "outline": "#747780",
+                    "surface": "#f9f9ff",
+                    "primary-container": "#1a3c6e",
+                    "secondary-container": "#e51d24",
+                    "surface-container-highest": "#dce2f3",
+                    "on-tertiary-fixed": "#00210e",
+                    "secondary": "#bb0014",
+                    "on-primary-fixed": "#001b3f",
+                    "on-secondary-fixed": "#410002",
+                    "on-secondary-fixed-variant": "#93000d",
+                    "inverse-surface": "#2a313d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "32px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "gutter": "12px",
+                    "stack-lg": "24px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "headline-lg-mobile": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shimmer {
+            background: linear-gradient(90deg, #f0f3ff 0%, #e7eefe 50%, #f0f3ff 100%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .toast-entrance {
+            animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline shadow-sm flex justify-between items-center px-margin-mobile h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="menu">menu</span>
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">Vyapaar Mitra</h1>
+</div>
+<div class="flex items-center gap-stack-sm">
+<button class="p-2 rounded-full hover:bg-surface-container-low transition-opacity active:opacity-80">
+<span class="material-symbols-outlined text-primary" data-icon="translate">translate</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col pt-16 pb-24">
+<!-- Language Selector Section -->
+<section class="px-margin-mobile py-stack-lg bg-surface-container-lowest fade-in">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase mb-stack-sm">Select Preferred Language</p>
+<div class="flex flex-wrap gap-stack-sm">
+<button class="px-6 py-2 rounded-full border-2 border-primary bg-primary text-on-primary font-bold transition-all text-body-sm">
+                    English
+                </button>
+<button class="px-6 py-2 rounded-full border-2 border-outline text-on-surface-variant hover:border-primary-container hover:text-primary transition-all text-body-sm">
+                    हिन्दी
+                </button>
+<button class="px-6 py-2 rounded-full border-2 border-outline text-on-surface-variant hover:border-primary-container hover:text-primary transition-all text-body-sm">
+                    ગુજરાતી
+                </button>
+<button class="px-6 py-2 rounded-full border-2 border-outline text-on-surface-variant hover:border-primary-container hover:text-primary transition-all text-body-sm">
+                    தமிழ்
+                </button>
+</div>
+</section>
+<!-- Hero Illustration Area -->
+<section class="flex-grow flex flex-col justify-center items-center px-margin-mobile text-center py-stack-lg fade-in" style="animation-delay: 0.2s">
+<div class="relative w-full max-w-md aspect-square mb-stack-lg">
+<div class="absolute inset-0 bg-primary-container/5 rounded-full blur-3xl scale-90"></div>
+<!-- Hero Image Placeholder -->
+<div class="w-full h-full rounded-3xl overflow-hidden shadow-xl border border-outline-variant bg-surface-container-low flex items-center justify-center">
+<img class="object-cover w-full h-full" data-alt="A clean, professional 3D isometric illustration of an entrepreneur managing a digital shopfront with floating financial graphs and icons of business growth. The scene uses a deep corporate blue and white color palette, typical of high-end banking apps, with soft ambient lighting and a minimalist white studio background. The mood is empowering, organized, and technologically sophisticated, reflecting trust and authority." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-3ceL_sE88G4Qq5hDb0ytB6EQK4uFkWdxBQLzNrgWqM_B8ABEgNrP89VAR8iMgsrw5elCdd1EFoXDAf1BycOrba4bkflrMVtoUtvfWpN9J5VEITlp8Uth054eUqdUdXWeFmqIK3jV2EildTvH7N98mQ3sKXjRRwhG3t8AfrtzengtvDeNtrzyTH5RHEOtJ3zn0uwBO9iluOfvZcwKyYrtOokMfw3mvKmgW5GCtVOG7YVafV-mv3ia"/>
+</div>
+<!-- Floating Card Detail -->
+<div class="absolute -bottom-4 -right-4 bg-white p-stack-md rounded-xl shadow-lg border border-outline-variant flex items-center gap-3 fade-in" style="animation-delay: 0.6s">
+<div class="w-10 h-10 bg-tertiary-fixed rounded-full flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<div class="text-left">
+<div class="text-xs text-on-surface-variant">Business Growth</div>
+<div class="font-bold text-primary">+24.8%</div>
+</div>
+</div>
+</div>
+<div class="max-w-xs mx-auto">
+<h2 class="font-display-lg text-display-lg text-primary mb-stack-sm">Grow Your Business With Ease</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Your dedicated companion for digital banking, payments, and MSME growth services.</p>
+</div>
+</section>
+<!-- Value Propositions - Bento Grid Style -->
+<section class="px-margin-mobile grid grid-cols-2 gap-stack-sm mb-stack-lg fade-in" style="animation-delay: 0.4s">
+<div class="bg-surface-container p-stack-md rounded-xl flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="security">security</span>
+<span class="font-headline-sm text-headline-sm text-primary leading-tight">Secure Banking</span>
+<p class="text-[10px] text-on-surface-variant">RBI Regulated</p>
+</div>
+<div class="bg-tertiary-container/10 p-stack-md rounded-xl flex flex-col gap-2 border border-tertiary-fixed-dim/20">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="payments">payments</span>
+<span class="font-headline-sm text-headline-sm text-on-tertiary-container leading-tight">Instant Payouts</span>
+<p class="text-[10px] text-on-surface-variant">24/7 Processing</p>
+</div>
+</section>
+</main>
+<!-- Bottom Sticky CTA -->
+<div class="fixed bottom-0 left-0 w-full p-margin-mobile bg-surface-container-lowest border-t border-outline-variant shadow-[0_-4px_20px_rgba(0,0,0,0.05)] z-40">
+<button class="w-full h-14 bg-primary-container text-on-primary font-bold rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-transform shadow-md">
+<span>Start Now</span>
+<span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Offline Recovery Toast (Hidden by default) -->
+<div class="fixed bottom-24 left-margin-mobile right-margin-mobile bg-inverse-surface text-inverse-on-surface p-stack-md rounded-lg shadow-xl hidden toast-entrance z-[60]" id="offline-toast">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-error" data-icon="cloud_off">cloud_off</span>
+<span class="font-body-sm text-body-sm">You are currently offline. Checking connection...</span>
+</div>
+<button class="text-primary-fixed-dim font-bold text-body-sm px-2" onclick="retryConnection()">RETRY</button>
+</div>
+</div>
+<script>
+        // Micro-interaction logic
+        window.addEventListener('offline', () => {
+            const toast = document.getElementById('offline-toast');
+            toast.classList.remove('hidden');
+        });
+
+        window.addEventListener('online', () => {
+            const toast = document.getElementById('offline-toast');
+            toast.classList.add('hidden');
+        });
+
+        function retryConnection() {
+            const toast = document.getElementById('offline-toast');
+            const retryBtn = toast.querySelector('button');
+            retryBtn.innerText = 'WAITING...';
+            retryBtn.disabled = true;
+            
+            setTimeout(() => {
+                if (navigator.onLine) {
+                    toast.classList.add('hidden');
+                }
+                retryBtn.innerText = 'RETRY';
+                retryBtn.disabled = false;
+            }, 1500);
+        }
+
+        // Language toggle behavior
+        const langBtns = document.querySelectorAll('button[class*="rounded-full"]');
+        langBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                langBtns.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary', 'border-primary');
+                    b.classList.add('border-outline', 'text-on-surface-variant');
+                });
+                btn.classList.remove('border-outline', 'text-on-surface-variant');
+                btn.classList.add('bg-primary', 'text-on-primary', 'border-primary', 'font-bold');
+            });
+        });
+
+        // Initialize view based on current state
+        if (!navigator.onLine) {
+            document.getElementById('offline-toast').classList.remove('hidden');
+        }
+    </script>
+</body></html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Financial Insights &amp; Products - Vyapaar Mitra</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#2c49a3",
+                    "surface-container-low": "#f5f3f3",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-secondary-fixed": "#00201f",
+                    "tertiary-fixed-dim": "#ffb59a",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f2f0f0",
+                    "outline": "#757683",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c5c5d4",
+                    "primary": "#0b308b",
+                    "inverse-surface": "#303031",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#213f99",
+                    "secondary": "#006a68",
+                    "on-secondary-container": "#006e6d",
+                    "surface-variant": "#e4e2e2",
+                    "secondary-fixed": "#72f6f4",
+                    "on-primary-fixed": "#00164f",
+                    "tertiary-fixed": "#ffdbcf",
+                    "primary-fixed": "#dce1ff",
+                    "background": "#fbf9f8",
+                    "on-secondary-fixed-variant": "#00504f",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#682000",
+                    "on-primary-container": "#b0c0ff",
+                    "on-tertiary-fixed": "#380d00",
+                    "on-surface-variant": "#444652",
+                    "error": "#ba1a1a",
+                    "surface-container-highest": "#e4e2e2",
+                    "secondary-container": "#6ff4f1",
+                    "surface-container-high": "#e9e8e7",
+                    "inverse-primary": "#b6c4ff",
+                    "surface-bright": "#fbf9f8",
+                    "surface": "#fbf9f8",
+                    "on-surface": "#1b1c1c",
+                    "tertiary-container": "#8f2f00",
+                    "surface-dim": "#dbdad9",
+                    "surface-tint": "#3d58b3",
+                    "secondary-fixed-dim": "#51dad7",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#efeded",
+                    "on-tertiary-fixed-variant": "#802a00",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#ffae90",
+                    "on-background": "#1b1c1c",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "xl": "64px",
+                    "lg": "40px",
+                    "md": "24px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "display": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Inter"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "display": [
+                            "48px",
+                            {
+                                    "lineHeight": "56px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "40px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- Top Navigation (Web) -->
+<header class="hidden md:flex justify-between items-center w-full px-margin-desktop py-base z-50 sticky top-0 bg-surface-bright shadow-sm">
+<div class="flex items-center gap-md">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">Vyapaar Mitra</h1>
+</div>
+<div class="flex items-center gap-md">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary text-body-md transition-shadow" placeholder="Search..." type="text"/>
+</div>
+<button aria-label="notifications" class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors active:scale-95 transition-transform">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button aria-label="help" class="p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-colors active:scale-95 transition-transform">
+<span class="material-symbols-outlined">help</span>
+</button>
+<img alt="Business Owner Profile" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A professional headshot of a business owner, well-lit in a modern office environment, signifying success and reliability. The color palette is corporate and clean, with soft neutral tones and professional attire." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwhFiZR574IAjltzCOnZMYa_sN6zkMYrh0-mYVi0cvqpBT2cyvKT1aWjucDk_Lj2reiMycfuvfA7EB69SA8lECFvA4qctv7RB2XDquBcz5-XJIhUuiOkJlTDXAeDeRCkWQpNXTvHM_79vejAdXY-r8Yikslu_vmtkiFEkuiIsV4dhFt7R4vYbEwSFjtTAghoNCOP9dVIMs31c2CvRUQ_Z5AYQ91T_sWuZyGvpIS4klijExk-zcjpe_"/>
+</div>
+</header>
+<div class="flex">
+<!-- Side Navigation (Web) -->
+<aside class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 pt-20 bg-surface-container-lowest shadow-sm border-r border-outline-variant z-40">
+<div class="px-md pb-md border-b border-outline-variant">
+<div class="flex items-center gap-sm mb-4">
+<img alt="Vyapaar Mitra Logo" class="w-12 h-12 rounded-lg object-contain bg-surface-container-low p-2" data-alt="A stylized logo icon for Vyapaar Mitra, featuring a modern geometric design in primary blue tones, suggesting growth and financial stability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFtGpz4bhu2I3GbsX-zcnDg9_RmvSQ7wlO0BYCjKycPcVQcDuiBcQcpjyZQizHJHEGaqHQWOoExyrKgPb_0mjqXcMHOrH7ERGPn9laVG2d_h4b01Al94RssHeH5rEa1Xf3-gnfVo0ZJQdyGffv8yZoBoZLiUwj7lqwmwDt-kB6JDEAhoX4La7whf-OpN28V8DD22CnsUrb2G-sfjDEfUPVCfnI8Zk_C5B2giqkSLT9lh1UK9K1djB4"/>
+<div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Mitra Portal</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Business Partner</p>
+</div>
+</div>
+<button class="w-full bg-[#F06428] text-white font-label-md text-label-md py-2 rounded-lg hover:opacity-90 transition-opacity">Apply for Credit</button>
+</div>
+<nav class="flex-1 py-md flex flex-col gap-2 overflow-y-auto">
+<a class="flex items-center gap-sm py-3 px-4 mx-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+<a class="flex items-center gap-sm py-3 px-4 mx-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-label-md text-label-md">Transactions</span>
+</a>
+<a class="flex items-center gap-sm py-3 px-4 mx-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="font-label-md text-label-md">Inventory</span>
+</a>
+<a class="flex items-center gap-sm py-3 px-4 mx-2 bg-secondary-container text-on-secondary-container rounded-lg transition-all duration-200 ease-in-out font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span>Reports</span>
+</a>
+<a class="flex items-center gap-sm py-3 px-4 mx-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Settings</span>
+</a>
+</nav>
+<div class="p-md border-t border-outline-variant">
+<a class="flex items-center gap-sm py-2 text-on-surface-variant hover:text-on-surface transition-colors" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span class="font-label-md text-label-md">Support</span>
+</a>
+<a class="flex items-center gap-sm py-2 text-on-surface-variant hover:text-on-surface transition-colors mt-2" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-label-md text-label-md">Logout</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-margin-mobile md:p-margin-desktop max-w-[1280px] mx-auto w-full">
+<div class="mb-lg">
+<h1 class="font-display text-display text-on-surface mb-xs">Financial Insights</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Comprehensive overview and product marketplace.</p>
+</div>
+<!-- 1. Performance Header -->
+<section class="mb-xl grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Account Balances Bento -->
+<div class="lg:col-span-1 bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-md flex flex-col gap-md border border-outline-variant/30">
+<h3 class="font-headline-md text-headline-md text-on-surface">Account Balances</h3>
+<div class="p-sm bg-surface-container-low rounded-lg">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Current Account</span>
+<span class="material-symbols-outlined text-primary text-sm">account_balance</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">₹12,45,000</div>
+</div>
+<div class="p-sm bg-surface-container-low rounded-lg">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Overdraft Available</span>
+<span class="material-symbols-outlined text-secondary text-sm">credit_score</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">₹5,00,000</div>
+</div>
+<div class="p-sm bg-surface-container-low rounded-lg">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-md text-label-md text-on-surface-variant">Business Savings</span>
+<span class="material-symbols-outlined text-tertiary text-sm">savings</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">₹8,30,000</div>
+</div>
+</div>
+<!-- Cash Flow Trend Chart (Placeholder) -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(0,0,0,0.04)] p-md border border-outline-variant/30 flex flex-col relative overflow-hidden">
+<div class="flex justify-between items-center mb-md relative z-10">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">6-Month Cash Flow</h3>
+<p class="font-label-sm text-label-sm text-secondary">Inflow exceeding outflow by 15%</p>
+</div>
+<button class="px-3 py-1 border border-primary text-primary rounded-lg font-label-md text-label-md hover:bg-primary/5 transition-colors">Detailed Report</button>
+</div>
+<div class="flex-1 relative z-10 min-h-[200px] flex items-end justify-between px-2 pb-4">
+<!-- Abstract Chart Representation -->
+<div class="w-1/12 bg-primary/20 rounded-t-sm h-[40%] hover:bg-primary/40 transition-colors"></div>
+<div class="w-1/12 bg-primary/30 rounded-t-sm h-[55%] hover:bg-primary/50 transition-colors"></div>
+<div class="w-1/12 bg-primary/40 rounded-t-sm h-[45%] hover:bg-primary/60 transition-colors"></div>
+<div class="w-1/12 bg-primary/60 rounded-t-sm h-[70%] hover:bg-primary/80 transition-colors"></div>
+<div class="w-1/12 bg-primary/80 rounded-t-sm h-[65%] hover:bg-primary transition-colors"></div>
+<div class="w-1/12 bg-primary rounded-t-sm h-[90%] hover:bg-primary-container transition-colors shadow-[0_0_15px_rgba(11,48,139,0.3)]"></div>
+</div>
+<!-- Background Pattern -->
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(#2c49a3 1px, transparent 1px); background-size: 20px 20px;"></div>
+</div>
+</section>
+</main>
+</div>
+</body></html>

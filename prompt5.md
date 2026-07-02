@@ -1,5 +1,4 @@
 ### Prompt 5: DevOps & Infrastructure (Self-Healing Chaos Monkey)
-**Copy this into Antigravity:**
 
 > **Role:** Senior DevOps Engineer (Kubernetes, Terraform, Python).
 > **Project:** "Vyapaar Mitra" — Infrastructure & Resilience Testing.

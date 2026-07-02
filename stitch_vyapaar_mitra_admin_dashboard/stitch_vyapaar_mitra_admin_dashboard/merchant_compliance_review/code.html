@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vyapaar Mitra - Merchant Review</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#405e92",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#feb87c",
+                        "primary-fixed": "#d7e3ff",
+                        "outline": "#747780",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001b3f",
+                        "on-primary-fixed-variant": "#264679",
+                        "background": "#f7f9fb",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "surface-dim": "#d8dadc",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-container": "#db9960",
+                        "primary": "#002653",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-tertiary-fixed": "#2e1500",
+                        "tertiary": "#3e1f00",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#57657a",
+                        "on-background": "#191c1e",
+                        "on-primary": "#ffffff",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed-dim": "#abc7ff",
+                        "primary-container": "#1a3c6e",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed": "#d5e3fc",
+                        "tertiary-fixed": "#ffdcc2",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-secondary-fixed": "#0d1c2e",
+                        "secondary": "#515f74",
+                        "inverse-primary": "#abc7ff",
+                        "tertiary-container": "#5e3100",
+                        "on-surface-variant": "#43474f",
+                        "surface-container": "#eceef0",
+                        "outline-variant": "#c4c6d0",
+                        "surface": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-container": "#8aa8e0",
+                        "on-surface": "#191c1e",
+                        "on-tertiary-fixed-variant": "#6b3b09",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#d5e3fc"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "max-width": "1440px",
+                        "container-padding": "24px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "unit": "8px",
+                        "gutter": "16px",
+                        "sidebar": "280px",
+                        "topnav": "64px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "title-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "title-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-hidden">
+<!-- App Shell -->
+<div class="flex h-screen w-full">
+<!-- SideNavBar (from JSON) -->
+<nav class="hidden md:flex flex-col h-full w-sidebar bg-surface-container-low border-r border-outline-variant py-stack-lg z-50">
+<!-- Header -->
+<div class="px-stack-lg mb-stack-lg flex items-center gap-stack-md">
+<img class="w-10 h-10 rounded-lg object-cover" data-alt="A minimalist logo for SBI Vyapaar Mitra featuring a stylized corporate shield in deep blue with clean, modern geometry. Set against a pure white background with soft, studio-quality lighting to highlight the professional and secure nature of the enterprise banking brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApOUhsSB0QDjV18yjwuK1pagH7k-OQlyudx4YpQVc0w98pr7qt3Y0dw6Hx4s-E5vo6X3zCdDbNV6P_8INdoQZz8QIDjMXV5F3wGlyHdqMcFcVsAASK7gHOKzY6slwlmdToXFH0U3qT9v6y4m6WcyNMKypzp_T4jJ8BvxdhoqoQOtdPA7getRe4_GAfpx4K_ldNyLFYjiyMetcZjvMFCtsz1vwzHOx-UJuZlMS3MJSg0YqqZuYP3UpO"/>
+<div>
+<div class="text-title-md font-title-md font-black text-secondary">Vyapaar Mitra</div>
+<div class="text-label-sm font-label-sm text-secondary opacity-80">Enterprise Banking</div>
+</div>
+</div>
+<!-- Main Tabs -->
+<div class="flex-1 px-stack-sm flex flex-col gap-unit">
+<a class="text-primary opacity-70 flex items-center gap-stack-md px-stack-md py-stack-sm hover:bg-surface-container-high transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="dashboard">dashboard</span>
+<span class="text-label-sm font-label-sm">Dashboard</span>
+</a>
+<!-- Active Tab -->
+<a class="bg-surface text-secondary border-l-4 border-secondary font-bold flex items-center gap-stack-md px-stack-md py-stack-sm hover:bg-surface-container-high transition-all rounded-r-lg shadow-sm scale-95 duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="queue" style="font-variation-settings: 'FILL' 1;">queue</span>
+<span class="text-label-sm font-label-sm">Admin Queue</span>
+</a>
+<a class="text-primary opacity-70 flex items-center gap-stack-md px-stack-md py-stack-sm hover:bg-surface-container-high transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="security">security</span>
+<span class="text-label-sm font-label-sm">Compliance Trail</span>
+</a>
+<a class="text-primary opacity-70 flex items-center gap-stack-md px-stack-md py-stack-sm hover:bg-surface-container-high transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="history">history</span>
+<span class="text-label-sm font-label-sm">Audit Logs</span>
+</a>
+<a class="text-primary opacity-70 flex items-center gap-stack-md px-stack-md py-stack-sm hover:bg-surface-container-high transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="settings">settings</span>
+<span class="text-label-sm font-label-sm">Settings</span>
+</a>
+</div>
+<!-- Footer Tabs -->
+<div class="px-stack-sm flex flex-col gap-unit mt-auto border-t border-outline-variant pt-stack-md mx-stack-md">
+<a class="text-primary opacity-70 flex items-center gap-stack-md px-stack-md py-stack-sm hover:bg-surface-container-high transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="help">help</span>
+<span class="text-label-sm font-label-sm">Help Center</span>
+</a>
+<a class="text-primary opacity-70 flex items-center gap-stack-md px-stack-md py-stack-sm hover:bg-surface-container-high transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="logout">logout</span>
+<span class="text-label-sm font-label-sm">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col h-full relative overflow-hidden bg-background">
+<!-- TopNavBar (from JSON) -->
+<header class="bg-surface border-b border-outline-variant shadow-sm flex justify-between items-center w-full px-container-padding h-topnav z-40 shrink-0">
+<div class="flex items-center gap-stack-md">
+<!-- Mobile Menu Toggle (Visible only on mobile) -->
+<button class="md:hidden text-primary p-unit rounded-full hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Search Bar placeholder -->
+<div class="hidden sm:flex items-center bg-surface-container-low rounded-full px-stack-md py-unit border border-outline-variant w-64">
+<span class="material-symbols-outlined text-outline text-[18px] mr-unit">search</span>
+<input class="bg-transparent border-none outline-none text-body-md font-body-md text-on-surface w-full focus:ring-0 p-0 placeholder-outline" placeholder="Search Vyapaar Mitra..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="hidden md:flex items-center gap-unit">
+<button class="text-primary p-unit rounded-full hover:bg-surface-container-low transition-colors opacity-70 hover:opacity-100">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-primary p-unit rounded-full hover:bg-surface-container-low transition-colors opacity-70 hover:opacity-100">
+<span class="material-symbols-outlined">contact_support</span>
+</button>
+<button class="text-primary p-unit rounded-full hover:bg-surface-container-low transition-colors opacity-70 hover:opacity-100">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant mx-unit hidden md:block"></div>
+<div class="flex items-center gap-stack-sm cursor-pointer hover:bg-surface-container-low p-unit rounded-lg transition-colors">
+<div class="flex flex-col items-end hidden sm:flex">
+<span class="text-label-sm font-label-sm text-primary font-bold">Admin User</span>
+<span class="text-[10px] text-primary flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-[#10b981]"></span>Online</span>
+</div>
+<img alt="User profile photo" class="w-8 h-8 rounded-full border border-outline-variant object-cover" data-alt="A professional headshot of a corporate financial administrator. The person is wearing a tailored dark navy suit with a crisp white shirt, standing in a bright, modern glass-walled office. The lighting is soft and flattering, creating a trustworthy and authoritative corporate portrait suitable for an enterprise portal avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvRborfFDkOnulCbOFYb1Q08vx-oH5FmJ3-vebzRH4e_okGjb_3UpoW7k46sLS0DX1_6JnzcvXmnbweRMu1sNAH530FX45SY7SwPgl4cO8ftX_KdBe_MZ5PCUY0yjY8yfrr0Ndg3TMpidLzivIVz59_79OPHrMrSWMLICvVdX1dRv2mgI9Cg0F6uee6Y6U37YLBuJsO91cuALSnAqSMjfDUDASPcE1AUh2i-we3x_LH176OIZMaWAI"/>
+</div>
+</div>
+</header>
+<!-- Scrollable Canvas -->
+<main class="flex-1 overflow-y-auto">
+<!-- Sticky Header specific to this screen -->
+<div class="sticky top-0 z-30 bg-surface/95 backdrop-blur-md border-b border-outline-variant px-container-padding py-stack-md flex flex-col sm:flex-row sm:items-center justify-between gap-stack-md">
+<div>
+<div class="flex items-center gap-unit text-body-md font-body-md text-on-surface-variant mb-1">
+<a class="hover:text-primary transition-colors" href="#">Queue</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary font-medium">Merchant Review</span>
+</div>
+<h1 class="text-headline-lg-mobile md:text-headline-lg font-headline-lg text-on-surface">Reliance Retail Ltd.</h1>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="flex items-center gap-unit px-stack-md py-unit border border-outline text-primary rounded-lg text-label-sm font-label-sm hover:bg-surface-container-low transition-colors bg-surface">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+                            Manual Override
+                        </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="p-container-padding max-w-max-width mx-auto">
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-stack-lg">
+<!-- Left Column (Main Data) -->
+<div class="xl:col-span-8 flex flex-col gap-stack-lg">
+<!-- 1. Merchant Profile Card -->
+<section class="bg-surface-container-lowest border border-outline-variant shadow-sm rounded-xl p-container-padding">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-stack-md pb-stack-md border-b border-outline-variant gap-stack-md">
+<div class="flex items-center gap-stack-md">
+<div class="w-16 h-16 rounded-lg bg-surface-container flex items-center justify-center border border-outline-variant shrink-0">
+<span class="material-symbols-outlined text-[32px] text-secondary">storefront</span>
+</div>
+<div>
+<h2 class="text-title-md font-title-md text-on-surface">Reliance Retail Ltd.</h2>
+<div class="text-body-md font-body-md text-on-surface-variant mt-1 flex items-center gap-2">
+<span>Reg ID: <strong class="text-primary">VYP-2024-8891A</strong></span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>Mumbai, Maharashtra</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<div class="text-label-sm font-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">System Risk Score</div>
+<div class="bg-primary-container/20 text-primary-container px-3 py-1 rounded-full text-label-sm font-label-sm font-bold flex items-center gap-1 border border-primary-container/30">
+<span class="material-symbols-outlined text-[16px]">shield_lock</span>
+                                            Low Risk (92/100)
+                                        </div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+<div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mb-1">Business Type</div>
+<div class="text-body-md font-body-md text-on-surface font-medium">Public Limited Company</div>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mb-1">Incorporation Date</div>
+<div class="text-body-md font-body-md text-on-surface font-medium">12-Aug-2005</div>
+</div>
+<div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mb-1">Primary Contact</div>
+<div class="text-body-md font-body-md text-on-surface font-medium">Rajiv Mehta (+91 98*** ***12)</div>
+</div>
+</div>
+</section>
+<!-- 2. Compliance Checklist -->
+<section class="bg-surface-container-lowest border border-outline-variant shadow-sm rounded-xl p-container-padding">
+<h3 class="text-title-md font-title-md text-on-surface mb-stack-md">Verification Checklist</h3>
+<div class="flex flex-col gap-unit">
+<!-- Item 1 -->
+<div class="flex items-center justify-between p-stack-sm rounded-lg bg-surface hover:bg-surface-container-low border border-transparent hover:border-outline-variant transition-all">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-[#10b981]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<div class="text-body-md font-body-md text-on-surface font-medium">PAN Verification</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant">Matched with NSDL database</div>
+</div>
+</div>
+<a class="text-primary text-label-sm font-label-sm hover:underline" href="#">View Doc</a>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center justify-between p-stack-sm rounded-lg bg-surface hover:bg-surface-container-low border border-transparent hover:border-outline-variant transition-all">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-[#10b981]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div>
+<div class="text-body-md font-body-md text-on-surface font-medium">GSTIN Validation</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant">Active status on GST Portal</div>
+</div>
+</div>
+<a class="text-primary text-label-sm font-label-sm hover:underline" href="#">View Details</a>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center justify-between p-stack-sm rounded-lg bg-surface-container border border-outline-variant transition-all">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-[#f59e0b]">pending</span>
+<div>
+<div class="text-body-md font-body-md text-on-surface font-medium">MCA Company Master Data</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant">Awaiting manual review of directors list</div>
+</div>
+</div>
+<button class="text-primary text-label-sm font-label-sm border border-outline-variant px-3 py-1 rounded hover:bg-surface bg-surface-container-lowest">Verify Now</button>
+</div>
+</div>
+</section>
+<!-- 3. Transaction Insights -->
+<section class="bg-surface-container-lowest border border-outline-variant shadow-sm rounded-xl p-container-padding">
+<div class="flex justify-between items-center mb-stack-md">
+<h3 class="text-title-md font-title-md text-on-surface">Transaction Insights</h3>
+<select class="bg-surface border border-outline-variant text-body-md font-body-md rounded-lg px-3 py-1 text-on-surface outline-none focus:border-primary focus:ring-1 focus:ring-primary">
+<option>Last 30 Days</option>
+<option>Last 90 Days</option>
+</select>
+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant mb-stack-md">Volume vs Established Thresholds (₹ Lakhs)</div>
+<!-- Chart Placeholder Layout -->
+<div class="h-48 w-full flex items-end justify-between gap-2 border-b border-l border-outline-variant pb-2 pl-2 relative">
+<!-- Threshold Line -->
+<div class="absolute top-10 left-0 w-full border-t border-dashed border-error-container z-0 flex items-center">
+<span class="absolute -left-12 text-[10px] text-error">Limit</span>
+</div>
+<!-- Bars -->
+<div class="w-full bg-primary-fixed-dim rounded-t-sm h-[40%] relative z-10 group hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed-dim rounded-t-sm h-[60%] relative z-10 group hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed-dim rounded-t-sm h-[55%] relative z-10 group hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed-dim rounded-t-sm h-[80%] relative z-10 group hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-secondary-fixed-dim rounded-t-sm h-[95%] relative z-10 group hover:bg-secondary transition-colors cursor-pointer border-t-2 border-error"></div>
+<div class="w-full bg-primary-fixed-dim rounded-t-sm h-[50%] relative z-10 group hover:bg-primary transition-colors cursor-pointer"></div>
+<div class="w-full bg-primary-fixed-dim rounded-t-sm h-[70%] relative z-10 group hover:bg-primary transition-colors cursor-pointer"></div>
+</div>
+<div class="flex justify-between mt-2 text-[10px] text-on-surface-variant px-2">
+<span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span>
+</div>
+</section>
+</div>
+<!-- Right Column (Action Panel) -->
+<div class="xl:col-span-4">
+<div class="sticky top-[160px] flex flex-col gap-stack-md">
+<!-- Action Card -->
+<section class="bg-surface-container-lowest border border-outline-variant shadow-sm rounded-xl p-container-padding">
+<h3 class="text-title-md font-title-md text-on-surface mb-stack-md border-b border-outline-variant pb-unit">Final Decision</h3>
+<div class="mb-stack-md">
+<label class="text-label-sm font-label-sm text-on-surface-variant block mb-unit">Reviewer Notes (Internal)</label>
+<textarea class="w-full bg-surface border border-outline-variant rounded-lg p-stack-sm text-body-md font-body-md text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none resize-none h-24 placeholder-outline" placeholder="Add justification for approval or rejection..."></textarea>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg text-body-md font-body-md font-bold hover:bg-primary-container transition-colors shadow-sm flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+                                            Approve Merchant
+                                        </button>
+<button class="w-full bg-surface-container-lowest text-on-surface border border-outline py-3 rounded-lg text-body-md font-body-md font-medium hover:bg-surface-container-low transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">info</span>
+                                            Request More Info
+                                        </button>
+<button class="w-full bg-error-container text-on-error-container border border-error-container py-3 rounded-lg text-body-md font-body-md font-medium hover:bg-[#ffc6c2] transition-colors flex justify-center items-center gap-2 mt-stack-sm">
+<span class="material-symbols-outlined text-[20px]">cancel</span>
+                                            Reject Application
+                                        </button>
+</div>
+</section>
+<!-- Audit Summary Small Card -->
+<section class="bg-surface-container border border-outline-variant rounded-xl p-stack-md">
+<div class="flex items-center gap-unit text-label-sm font-label-sm text-on-surface-variant mb-unit">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                                        Time in Queue: 2hrs 15mins
+                                    </div>
+<div class="flex items-center gap-unit text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">person</span>
+                                        Assigned to: You
+                                    </div>
+</section>
+</div>
+</div>
+</div>
+</div>
+<!-- Spacer for bottom padding -->
+<div class="h-stack-lg"></div>
+</main>
+</div>
+</div>
+</body></html>
